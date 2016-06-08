@@ -29,6 +29,12 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		karma: {
+			unit: {
+				configFile: 'karma.conf.js',
+				autoWatch: true
+			}
+		},
 		watch: {
 			scripts: {
 				files: ['**/*.js'],
@@ -47,4 +53,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks('grunt-karma');
 }; 
