@@ -1,10 +1,10 @@
 // Karma configuration
 // Generated on Wed Jun 08 2016 21:22:48 GMT+0300 (FLE Daylight Time)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
-  	// start these browsers
+    // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['PhantomJS'],
     // you can define custom flags
@@ -57,7 +57,21 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'html'],
+    htmlReporter: {
+      outputDir: 'karma_html', // where to put the reports  
+      templatePath: null, // set if you moved jasmine_template.html 
+      focusOnFailures: true, // reports show failures on start 
+      namedFiles: false, // name files instead of creating sub-directories 
+      pageTitle: null, // page title for reports; browser info by default 
+      urlFriendlyName: false, // simply replaces spaces with _ for files/dirs 
+      reportName: 'report-summary-filename', // report summary filename; browser info by default 
+
+
+      // experimental 
+      preserveDescribeNesting: false, // folded suites stay folded  
+      foldAll: false, // reports start folded (only with preserveDescribeNesting) 
+    },
 
 
     // web server port
