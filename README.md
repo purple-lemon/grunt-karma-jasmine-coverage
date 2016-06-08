@@ -8,6 +8,7 @@ SImple project with code coverage on karma and grunt configured project
   - install karma 
   ```bash
   npm install karma --save-dev
+  
   npm install karma-jasmine karma-chrome-launcher --save-dev
   ```
   - install phantom-js launcher. check: https://github.com/karma-runner/karma-phantomjs-launcher
